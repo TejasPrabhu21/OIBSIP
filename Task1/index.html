@@ -1,45 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>Calculator</title>
 </head>
-<body>
-    <!-- <div class="header">
-        <h1>CALCULATOR</h1>
-    </div> -->
 
-    <div class="container">
-        <form action="evaluate()" class="calculator">
-            <fieldset class="answer">
-                <input type="text" class="equation" readonly>
-                <input type="text" class="input" >
-            </fieldset>
-            <fieldset class="buttons">
-                <button>(</button>
-                <button>)</button>
-                <button>%</button>
-                <button>DEL</button>
-                <button>7</button>
-                <button>8</button>
-                <button>9</button>
-                <button>/</button>
-                <button>4</button>
-                <button>5</button>
-                <button>6</button>
-                <button>*</button>
-                <button>1</button>
-                <button>2</button>
-                <button>3</button>
-                <button>+</button>
-                <button>.</button>
-                <button>0</button>
-                <button>ENTER</button>
-                <button>-</button>
-            </fieldset>
-        </form>
+<body>
+    <div class="heading">
+        <h1>CALCULATOR</h1>
     </div>
+
+    <div id="container">
+        <input type="text" class="input" id="display" readonly>
+        <br>
+        <input type="button" class="operators" value="(" onclick="addToDisplay('(')">
+        <input type="button" class="operators" value=")" onclick="addToDisplay(')')">
+        <input type="button" class="operators" value="√" onclick="squareRoot()">
+        <input type="button" value="C" onclick="clearDisplay()">
+        <input type="button" value="DEL" onclick="deleteLast()">
+        <br>
+        <input type="button" value="7" onclick="addToDisplay('7')">
+        <input type="button" value="8" onclick="addToDisplay('8')">
+        <input type="button" value="9" onclick="addToDisplay('9')">
+        <input type="button" class="operators" value="/" onclick="addToDisplay('/')">
+        <input type="button" class="operators" value="%" onclick="addToDisplay('%')">
+        <br>
+        <input type="button" value="4" onclick="addToDisplay('4')">
+        <input type="button" value="5" onclick="addToDisplay('5')">
+        <input type="button" value="6" onclick="addToDisplay('6')">
+        <input type="button" class="operators" value="X" onclick="addToDisplay('*')">
+        <input type="button" class="operators" value="^" onclick="addToDisplay('**')">
+        <br>
+        <input type="button" value="1" onclick="addToDisplay('1')">
+        <input type="button" value="2" onclick="addToDisplay('2')">
+        <input type="button" value="3" onclick="addToDisplay('3')">
+        <input type="button" class="operators" value="-" onclick="addToDisplay('-')">
+        <input type="button" class="operators" value="+" onclick="addToDisplay('+')">
+        <br>
+        <input type="button" class="operators" value="." onclick="addToDisplay('.')">
+        <input type="button" value="0" onclick="addToDisplay('0')">
+        <input type="button" class="operators" value="+/-" onclick="changeSign()">
+        <input type="button" value="=" onclick="getResult()">
+    </div>
+    <script src="app.js"></script>
 </body>
+
 </html>
